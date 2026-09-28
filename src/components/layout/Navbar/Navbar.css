@@ -38,10 +38,11 @@
 }
 
 .navbar__logo-img {
-  height: 48px;
+  height: 70px;
   width: auto;
   border-radius: var(--radius-xs);
   transition: var(--transition);
+  mix-blend-mode: multiply; /* Helps transparentize white backgrounds on light navs */
 }
 
 .navbar__logo:hover .navbar__logo-img {

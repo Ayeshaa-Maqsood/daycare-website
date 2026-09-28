@@ -88,7 +88,7 @@ const Navbar = () => {
               className="btn btn-primary btn-sm"
               id="navbar-enroll-btn"
             >
-              Enroll Now ✨
+              Enroll Now
             </Link>
           </div>
 
@@ -138,7 +138,7 @@ const Navbar = () => {
             id="mobile-enroll-btn"
             onClick={closeMenu}
           >
-            Enroll Now ✨
+            Enroll Now
           </Link>
         </div>
       </nav>
