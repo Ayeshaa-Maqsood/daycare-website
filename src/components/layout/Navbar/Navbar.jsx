@@ -57,11 +57,7 @@ const Navbar = () => {
 
           {/* Logo */}
           <Link to="/" className="navbar__logo" onClick={closeMenu}>
-            <div className="navbar__logo-icon" aria-hidden="true">🌸</div>
-            <div className="navbar__logo-text">
-              <span className="navbar__logo-name">Angels &amp; Fairies</span>
-              <span className="navbar__logo-tagline">Daycare Center</span>
-            </div>
+            <img src="/src/assets/images/logo.jpg" alt="Angels & Fairies Daycare" className="navbar__logo-img" />
           </Link>
 
           {/* Desktop nav links */}

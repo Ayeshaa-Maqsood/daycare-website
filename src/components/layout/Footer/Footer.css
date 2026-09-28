@@ -21,36 +21,15 @@
 .footer__brand-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
   margin-bottom: var(--space-5);
   text-decoration: none;
 }
 
-.footer__brand-icon {
-  width: 44px;
-  height: 44px;
-  background: var(--grad-primary);
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  flex-shrink: 0;
-}
-
-.footer__brand-name {
-  font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: 800;
-  color: white;
-  line-height: 1.2;
-}
-
-.footer__brand-tagline {
-  font-size: 0.68rem;
-  color: rgba(255,255,255,0.5);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+.footer__logo-img {
+  height: 56px;
+  width: auto;
+  border-radius: var(--radius-xs);
+  filter: brightness(0) invert(1);
 }
 
 .footer__brand-desc {

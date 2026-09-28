@@ -52,11 +52,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" className="footer__brand-logo">
-              <div className="footer__brand-icon" aria-hidden="true">🌸</div>
-              <div>
-                <div className="footer__brand-name">Angels &amp; Fairies</div>
-                <div className="footer__brand-tagline">Daycare Center</div>
-              </div>
+              <img src="/src/assets/images/logo.jpg" alt="Angels & Fairies Daycare" className="footer__logo-img" />
             </Link>
             <p className="footer__brand-desc">
               A safe, nurturing, and joyful environment where every child grows,
