@@ -38,7 +38,7 @@
 }
 
 .navbar__logo-img {
-  height: 70px;
+  height: 90px;
   width: auto;
   border-radius: var(--radius-xs);
   transition: var(--transition);

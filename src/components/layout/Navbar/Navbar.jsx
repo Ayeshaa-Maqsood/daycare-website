@@ -85,7 +85,7 @@ const Navbar = () => {
             </a>
             <Link
               to="/admissions"
-              className="btn btn-primary btn-sm"
+              className="btn btn-secondary btn-sm"
               id="navbar-enroll-btn"
             >
               Enroll Now
@@ -134,7 +134,7 @@ const Navbar = () => {
         <div className="navbar__mobile-cta">
           <Link
             to="/admissions"
-            className="btn btn-primary w-full"
+            className="btn btn-secondary w-full"
             id="mobile-enroll-btn"
             onClick={closeMenu}
           >
