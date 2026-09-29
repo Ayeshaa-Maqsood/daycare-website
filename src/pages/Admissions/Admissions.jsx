@@ -18,27 +18,26 @@ const Admissions = () => {
     event.preventDefault();
     setLoading(true);
 
-    var inquiryServer = 'https://inquiries-swart.vercel.app/inquiry?';
-
-    var params = new URLSearchParams({
+    const enrollParams = new URLSearchParams({
       parent_name: document.getElementById('parent_name') ? document.getElementById('parent_name').value : '',
       phone: document.getElementById('phone') ? document.getElementById('phone').value : '',
+      email: document.getElementById('email') ? document.getElementById('email').value : '',
       child_name: document.getElementById('child_name') ? document.getElementById('child_name').value : '',
       child_age: document.getElementById('child_age') ? document.getElementById('child_age').value : '',
-      email: document.getElementById('email') ? document.getElementById('email').value : '',
-      preferred_program: document.getElementById('preferred_program') ? document.getElementById('preferred_program').value : '',
-      preferred_start_date: document.getElementById('preferred_start_date') ? document.getElementById('preferred_start_date').value : '',
-      message: document.getElementById('message') ? document.getElementById('message').value : ''
+      preferred_program: document.getElementById('program') ? document.getElementById('program').value : '',
+      preferred_start_date: document.getElementById('start_date') ? document.getElementById('start_date').value : '',
+      message: document.getElementById('notes') ? document.getElementById('notes').value : ''
     });
 
-    fetch(inquiryServer + params.toString())
+    fetch('https://daycare-admin-alpha.vercel.app' + enrollParams.toString())
       .then(res => res.json())
-      .then(() => {
+      .then(data => {
+        console.log('Enrollment ID:', data.enrollment_number);
         alert("Thank you! Your daycare enquiry has been received.");
         setSubmitted(true);
       })
       .catch(error => {
-        console.error("Error submitting inquiry:", error);
+        console.error('Enrollment error:', error);
         alert("Thank you! Your daycare enquiry has been received.");
         setSubmitted(true);
       })
@@ -197,8 +196,8 @@ const Admissions = () => {
                     Preferred program
                     <select
                       required
-                      id="preferred_program"
-                      name="preferred_program"
+                      id="program"
+                      name="program"
                       defaultValue=""
                     >
                       <option value="" disabled>Select a program</option>
@@ -215,8 +214,8 @@ const Admissions = () => {
                   Preferred start date
                   <input
                     required
-                    id="preferred_start_date"
-                    name="preferred_start_date"
+                    id="start_date"
+                    name="start_date"
                     type="date"
                   />
                 </label>
@@ -225,8 +224,8 @@ const Admissions = () => {
                   Message
                   <textarea
                     required
-                    id="message"
-                    name="message"
+                    id="notes"
+                    name="notes"
                     rows="4"
                     placeholder="Tell us what you would like to know..."
                   />
