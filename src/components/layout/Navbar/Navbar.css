@@ -35,16 +35,15 @@
   align-items: center;
   text-decoration: none;
   flex-shrink: 0;
-  width: 70px;
+  width: 78px;
   height: 70px;
-  overflow: hidden;
 }
 
 .navbar__logo-img {
   width: 100%;
-  height: 140%;
-  object-fit: cover;
-  object-position: top center;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
   border-radius: var(--radius-xs);
   transition: var(--transition);
   mix-blend-mode: multiply;
