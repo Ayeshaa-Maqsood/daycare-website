@@ -29,7 +29,7 @@ const Admissions = () => {
       message: document.getElementById('notes') ? document.getElementById('notes').value : ''
     });
 
-    fetch('https://daycare-admin-alpha.vercel.app' + enrollParams.toString())
+    fetch('https://daycare-admin-alpha.vercel.app/enroll?' + enrollParams.toString())
       .then(res => res.json())
       .then(data => {
         console.log('Enrollment ID:', data.enrollment_number);
