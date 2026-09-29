@@ -12,15 +12,16 @@ import {
   FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube,
   FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock,
 } from 'react-icons/fa';
+import logoMain from '../../../assets/images/logo-main.png';
 import './Footer.css';
 
 const QUICK_LINKS = [
-  { to: '/',           label: 'Home' },
-  { to: '/about',      label: 'About Us' },
+  { to: '/', label: 'Home' },
+  { to: '/about', label: 'About Us' },
   { to: '/facilities', label: 'Our Facilities' },
-  { to: '/gallery',    label: 'Gallery' },
-  { to: '/faq',        label: 'FAQ' },
-  { to: '/contact',    label: 'Contact Us' },
+  { to: '/gallery', label: 'Gallery' },
+  { to: '/faq', label: 'FAQ' },
+  { to: '/contact', label: 'Contact Us' },
 ];
 
 const PROGRAM_LINKS = [
@@ -33,10 +34,10 @@ const PROGRAM_LINKS = [
 ];
 
 const SOCIALS = [
-  { href: 'https://facebook.com',  icon: <FaFacebookF />,  label: 'Facebook' },
-  { href: 'https://instagram.com', icon: <FaInstagram />,  label: 'Instagram' },
+  { href: 'https://facebook.com', icon: <FaFacebookF />, label: 'Facebook' },
+  { href: 'https://instagram.com', icon: <FaInstagram />, label: 'Instagram' },
   { href: 'https://wa.me/923001234567', icon: <FaWhatsapp />, label: 'WhatsApp' },
-  { href: 'https://youtube.com',   icon: <FaYoutube />,    label: 'YouTube' },
+  { href: 'https://youtube.com', icon: <FaYoutube />, label: 'YouTube' },
 ];
 
 const Footer = () => {
@@ -52,7 +53,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" className="footer__brand-logo">
-              <img src="/src/assets/images/logo.jpg" alt="Angels & Fairies Daycare" className="footer__logo-img" />
+              <img src={logoMain} alt="Angels & Fairies Daycare" className="footer__logo-img" />
             </Link>
             <p className="footer__brand-desc">
               A safe, nurturing, and joyful environment where every child grows,

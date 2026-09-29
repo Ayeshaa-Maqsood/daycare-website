@@ -8,25 +8,27 @@
  */
 
 import { useState, useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { FaPhone, FaBars, FaTimes } from 'react-icons/fa';
+import logoMain from '../../../assets/images/logo-main.png';
 import './Navbar.css';
 
 const NAV_LINKS = [
-  { to: '/',           label: 'Home' },
-  { to: '/about',      label: 'About Us' },
-  { to: '/programs',   label: 'Programs' },
+  { to: '/', label: 'Home' },
+  { to: '/about', label: 'About Us' },
+  { to: '/programs', label: 'Programs' },
   { to: '/activities', label: 'Activities' },
   { to: '/facilities', label: 'Facilities' },
-  { to: '/gallery',    label: 'Gallery' },
+  { to: '/gallery', label: 'Gallery' },
   { to: '/admissions', label: 'Admissions' },
-  { to: '/faq',        label: 'FAQ' },
-  { to: '/contact',    label: 'Contact' },
+  { to: '/faq', label: 'FAQ' },
+  { to: '/contact', label: 'Contact' },
 ];
 
 const Navbar = () => {
-  const [scrolled,    setScrolled]    = useState(false);
-  const [menuOpen,    setMenuOpen]    = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   // Add glass effect on scroll
   useEffect(() => {
@@ -52,12 +54,12 @@ const Navbar = () => {
 
   return (
     <>
-      <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <header className={`navbar ${location.pathname === '/' ? 'home' : ''} ${scrolled ? 'scrolled' : ''}`}>
         <div className="container navbar__inner">
 
           {/* Logo */}
           <Link to="/" className="navbar__logo" onClick={closeMenu}>
-            <img src="/src/assets/images/logo.jpg" alt="Angels & Fairies Daycare" className="navbar__logo-img" />
+            <img src={logoMain} alt="Angels & Fairies Daycare" className="navbar__logo-img" />
           </Link>
 
           {/* Desktop nav links */}

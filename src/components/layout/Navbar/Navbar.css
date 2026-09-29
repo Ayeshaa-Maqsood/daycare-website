@@ -35,14 +35,19 @@
   align-items: center;
   text-decoration: none;
   flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
 }
 
 .navbar__logo-img {
-  height: 90px;
-  width: auto;
+  width: 100%;
+  height: 140%;
+  object-fit: cover;
+  object-position: top center;
   border-radius: var(--radius-xs);
   transition: var(--transition);
-  mix-blend-mode: multiply; /* Helps transparentize white backgrounds on light navs */
+  mix-blend-mode: multiply;
 }
 
 .navbar__logo:hover .navbar__logo-img {
@@ -72,6 +77,22 @@
   transition: var(--transition);
   display: block;
   white-space: nowrap;
+}
+
+/* Keep navigation readable over the dark home hero before the glass state appears. */
+.navbar.home:not(.scrolled) .navbar__link a,
+.navbar.home:not(.scrolled) .navbar__call {
+  color: white;
+}
+
+.navbar.home:not(.scrolled) .navbar__link a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.navbar.home:not(.scrolled) .navbar__link a.active {
+  color: white;
+  background: rgba(255, 255, 255, 0.18);
 }
 
 .navbar__link a:hover {
@@ -156,10 +177,12 @@
 .navbar__hamburger.open span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
+
 .navbar__hamburger.open span:nth-child(2) {
   opacity: 0;
   transform: scaleX(0);
 }
+
 .navbar__hamburger.open span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
@@ -226,12 +249,25 @@
 
 /* ---- Responsive ---- */
 @media (max-width: 1024px) {
-  .navbar__links    { display: none; }
-  .navbar__call     { display: none; }
-  .navbar__hamburger { display: flex; }
-  .navbar__mobile   { display: flex; }
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__call {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  .navbar__mobile {
+    display: flex;
+  }
 }
 
 @media (max-width: 480px) {
-  .navbar__logo-text { display: none; }
+  .navbar__logo-text {
+    display: none;
+  }
 }

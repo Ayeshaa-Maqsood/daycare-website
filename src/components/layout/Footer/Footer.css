@@ -19,17 +19,19 @@
 
 /* ---- Brand column ---- */
 .footer__brand-logo {
-  display: flex;
-  align-items: center;
+  display: block;
+  width: 140px;
+  height: auto;
   margin-bottom: var(--space-5);
   text-decoration: none;
 }
 
 .footer__logo-img {
-  height: 90px;
-  width: auto;
+  width: 100%;
+  height: auto;
   border-radius: var(--radius-xs);
   filter: brightness(0) invert(1);
+  mix-blend-mode: screen;
 }
 
 .footer__brand-desc {
