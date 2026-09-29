@@ -18,7 +18,7 @@ const Admissions = () => {
     event.preventDefault();
     setLoading(true);
 
-    var inquiryServer = 'https://inquiries-swart.vercel.app/enroll?';
+    var inquiryServer = 'https://inquiries-swart.vercel.app/inquiry?';
 
     var params = new URLSearchParams({
       parent_name: document.getElementById('parent_name') ? document.getElementById('parent_name').value : '',
