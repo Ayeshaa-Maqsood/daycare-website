@@ -8,8 +8,8 @@
  */
 
 import { useState, useEffect } from 'react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
-import { FaPhone, FaBars, FaTimes } from 'react-icons/fa';
+import { NavLink, Link } from 'react-router-dom';
+import { FaPhone } from 'react-icons/fa';
 import logoMain from '../../../assets/images/logo-main.png';
 import './Navbar.css';
 
@@ -28,7 +28,6 @@ const NAV_LINKS = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation();
 
   // Add glass effect on scroll
   useEffect(() => {
@@ -54,7 +53,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className={`navbar ${location.pathname === '/' ? 'home' : ''} ${scrolled ? 'scrolled' : ''}`}>
+      <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container navbar__inner">
 
           {/* Logo */}

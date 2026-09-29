@@ -79,18 +79,18 @@
   white-space: nowrap;
 }
 
-/* Keep navigation readable over the dark home hero before the glass state appears. */
-.navbar.home:not(.scrolled) .navbar__link a,
-.navbar.home:not(.scrolled) .navbar__call {
+/* Keep navigation readable over page hero sections before the glass state appears. */
+.navbar:not(.scrolled) .navbar__link a,
+.navbar:not(.scrolled) .navbar__call {
   color: white;
 }
 
-.navbar.home:not(.scrolled) .navbar__link a:hover {
+.navbar:not(.scrolled) .navbar__link a:hover {
   color: white;
   background: rgba(255, 255, 255, 0.14);
 }
 
-.navbar.home:not(.scrolled) .navbar__link a.active {
+.navbar:not(.scrolled) .navbar__link a.active {
   color: white;
   background: rgba(255, 255, 255, 0.18);
 }
