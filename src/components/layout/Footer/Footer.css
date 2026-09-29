@@ -211,4 +211,8 @@
     text-align: center;
     gap: 10px;
   }
+
+  .footer { padding-top: 52px; }
+  .footer__brand-logo { width: 120px; }
+  .footer__bottom-links { flex-wrap: wrap; justify-content: center; gap: 10px 16px; }
 }

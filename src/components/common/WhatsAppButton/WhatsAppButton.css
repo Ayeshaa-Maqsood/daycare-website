@@ -96,3 +96,9 @@
   .float-btn--call  { width: 42px; height: 42px; font-size: 1.1rem; }
   .float-btn__tooltip { display: none; }
 }
+
+@media (max-width: 360px) {
+  .float-actions { right: 12px; bottom: 14px; gap: 8px; }
+  .float-btn { width: 46px; height: 46px; }
+  .float-btn--call { width: 38px; height: 38px; }
+}
